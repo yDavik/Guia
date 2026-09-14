@@ -48,7 +48,6 @@ main h2 {
   min-height: 140px;
   background-color: #292929;
   box-shadow: 4px 10px rgba(0, 0, 0, 0.6);
-  transition: 0.5s;
 }
 
 .cartaocomando h3 {
@@ -63,41 +62,43 @@ main h2 {
   line-height: 1.5;
 }
 
-.cartaocomando:hover {
-    transform: translateY(-5px);
-    background-color: rgb(249, 251, 252);
-    color: black;
-    font-family: monospace;
-}
+/* Rodapé */ 
+footer { 
+   padding: 25px 15px;
+    text-align: center; 
+} 
 
-/* Rodapé */
-footer {
-  padding: 25px 15px;
-  text-align: center;
-}
+footer p { 
+    font-size: 14px;
+    line-height: 1.5;
+ }
 
-footer p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* Tablet e computador */
-@media screen and (min-width: 768px) {
-
-  body {
+ /* Tablet e computador */
+ 
+ @media screen and (min-width: 768px) { 
+    
+ body { 
     font-size: 20px;
-  }
+   } 
 
-  .grupocomandos {
+  .grupocomandos { 
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .cartaocomando {
+   .cartaocomando { 
     width: calc(25% - 15px);
-  }
+    transition: 0.3s; 
+  } 
 
-  main {
-    padding: 0 30px;
-  }
-}
+   /* Efeito do mouse somente no tablet/PC */
+   
+   .cartaocomando:hover {
+     transform: translateY(-5px);
+     background-color: white;
+     color: black; 
+   } 
+
+   .cartaocomando:hover h3 {
+     color: black; } main { padding: 0 30px; } }
+
