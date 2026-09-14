@@ -1,46 +1,102 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
-    background-color: #202020;
-    color: aliceblue;
-    font-family: monospace;
-    font-size: x-large;
+body {
+  background-color: #202020;
+  color: aliceblue;
+  font-family: monospace;
+  font-size: 18px;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+header {
+  text-align: center;
+  padding: 25px 15px;
 }
 
-.grupoComandos {
+header h1 {
+  font-size: 28px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+main h2 {
+  font-size: 24px;
+}
+
+/* Área dos comandos */
+.grupocomandos {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.cartaoComando {
-  border: 1px solid #ff0000;
-  border-radius: 20px;
-  width: 85vw;
-  height: 20vh;
+/* Cartões */
+.cartaocomando {
+  border: 1px solid #0a85e9;
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+  min-height: 140px;
+  background-color: #292929;
+  box-shadow: 4px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
 }
 
+.cartaocomando h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0ea0e4;
+  overflow-wrap: break-word;
+}
+
+.cartaocomando p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cartaocomando:hover {
+    transform: translateY(-5px);
+    background-color: rgb(249, 251, 252);
+    color: black;
+    font-family: monospace;
+}
+
+/* Rodapé */
+footer {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Tablet e computador */
 @media screen and (min-width: 768px) {
-  .grupoComandos {
+
+  body {
+    font-size: 20px;
+  }
+
+  .grupocomandos {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .cartaoComando {
-    border: 1px solid #ff0000;
-    border-radius: 20px;
+  .cartaocomando {
     width: calc(25% - 15px);
-    min-height: fit-content;
+  }
+
+  main {
+    padding: 0 30px;
   }
 }
- 
