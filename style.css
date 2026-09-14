@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #202020;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: x-large;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupoComandos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cartaoComando {
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+  width: 85vw;
+  height: 20vh;
+}
+
+@media screen and (min-width: 768px) {
+  .grupoComandos {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cartaoComando {
+    border: 1px solid #ff0000;
+    border-radius: 20px;
+    width: calc(25% - 15px);
+    min-height: fit-content;
+  }
+}
+ 
